@@ -7,7 +7,7 @@
  */
 require_once('./Util/WeiXinUtil.php');
 $client = new WeiXinUtil();
-$client->login('807754634@qq.com','s807754634');
+$client->login('email','password');
 $client->GetMessage();
 do{
     $client->GetMessage();

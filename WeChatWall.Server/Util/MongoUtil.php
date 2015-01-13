@@ -10,7 +10,7 @@ class MongoUtil{
     private $connection;
     private $db;
     function __construct($my_db){
-        $this->connection = new MongoClient( "mongodb://210.30.100.181" );
+        $this->connection = new MongoClient( "mongodb://ip" );
         $this->db = $this->connection->$my_db;
     }
 
