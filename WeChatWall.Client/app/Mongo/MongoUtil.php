@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: XiMing
- * Date: 15-1-13
- * Time: 下午6:03
+ * Date: 15-1-14
+ * Time: 下午4:25
  */
 
 class MongoUtil{
@@ -21,11 +21,7 @@ class MongoUtil{
     function getTop100($colloction){
         $coll = $this->getColloction($colloction);
         $cursor = $coll->find();
-        foreach ( $cursor as $id => $value )
-        {
-            echo "$id: ";
-            var_dump( $value );
-        }
+        return $cursor;
     }
 
     function finone($colloction,$doc){
@@ -36,9 +32,5 @@ class MongoUtil{
     function insert($colloction,$doc){
         $coll = $this->getColloction($colloction);
         $coll->insert($doc);
-    }
-
-    function remove($colloction,$doc){
-        return $this->getColloction($colloction)->remove($doc);
     }
 }
